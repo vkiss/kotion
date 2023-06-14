@@ -2,6 +2,7 @@
 
 # dist
 /index.js
+/index.d.ts
 /components/
 /helpers/
 /types/

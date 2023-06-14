@@ -1,13 +1,14 @@
 {
   "name": "kotion",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "an abstraction lib to use notion api combined with next.js",
   "main": "index.js",
   "files": [
     "components",
     "helpers",
     "types",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "prepublishOnly": "npm run clean && npm run build",
@@ -47,6 +48,7 @@
     "components",
     "helpers",
     "types",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ]
 }

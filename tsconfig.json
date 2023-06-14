@@ -16,6 +16,7 @@
     "jsx": "react-jsx",
     "outDir": "./",
     "removeComments": true,
+    "declaration": true,
     "resolveJsonModule": true,
     "skipLibCheck": false,
     "strict": true,
