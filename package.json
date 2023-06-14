@@ -1,0 +1,52 @@
+{
+  "name": "kotion",
+  "version": "0.0.1",
+  "description": "an abstraction lib to use notion api combined with next.js",
+  "main": "index.js",
+  "files": [
+    "components",
+    "helpers",
+    "types",
+    "index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run build",
+    "build": "tsc --project tsconfig.json",
+    "clean": "clear-path"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkiss/kotion.git"
+  },
+  "keywords": [],
+  "author": "Vinicius Kiss <contato@kiss.dev.br> (https://kiss.dev.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vkiss/kotion/issues"
+  },
+  "homepage": "https://github.com/vkiss/kotion#readme",
+  "devDependencies": {
+    "@babel/core": "~7.22.5",
+    "@notionhq/client": "^2.2.5",
+    "@types/react": "~18.2.12",
+    "@types/react-dom": "~18.2.5",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "~9.1.2",
+    "clear-path": "~1.3.3",
+    "next": "*",
+    "react": "*",
+    "styled-components": "~5.3.11",
+    "ts-loader": "~9.4.3",
+    "typescript": "~5.1.3"
+  },
+  "dependencies": {
+    "@types/react-syntax-highlighter": "~15.5.7",
+    "react-syntax-highlighter": "~15.5.0"
+  },
+  "clearpath": [
+    "components",
+    "helpers",
+    "types",
+    "index.js"
+  ]
+}
