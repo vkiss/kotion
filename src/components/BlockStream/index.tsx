@@ -1,5 +1,4 @@
-import { FC, Fragment, memo, useMemo } from 'react';
-import { nanoid } from 'nanoid';
+import { FC, Fragment, memo, useId, useMemo } from 'react';
 
 // types
 import { BlockStreamProps } from './types';
@@ -23,6 +22,7 @@ const BlockStream: FC<BlockStreamProps> = ({
   replaceBlockQuote,
   replaceBlockToggle,
 }) => {
+  const id = useId();
   const replacers = useMemo(() => ({
     replaceBlockBookmark,
     replaceBlockCallout,
@@ -50,13 +50,13 @@ const BlockStream: FC<BlockStreamProps> = ({
       {blocks.map(( block: any ) => {
         if (block.archived) return null;
 
-        return (<Fragment key={nanoid()}>
+        return (<Fragment key={`${id}-kotion-block-stream-shell-${JSON.stringify(block)}`}>
           {getBlockFront({
             block,
             replacers,
           })}
           {block.children && block.type !== 'toggle' && Object.keys(block.children).map((childIndex: any) => {
-            return (<Atom.ChildrenContainer key={nanoid()}>
+            return (<Atom.ChildrenContainer key={`${id}-kotion-block-stream-item-${JSON.stringify(childIndex)}`}>
               {getBlockFront({
                 block: block.children[childIndex],
                 replacers,

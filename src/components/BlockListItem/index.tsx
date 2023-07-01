@@ -1,5 +1,4 @@
-import { FC, Fragment, memo } from 'react';
-import { nanoid } from 'nanoid';
+import { FC, Fragment, memo, useId } from 'react';
 
 import PlainText from '../PlainText';
 
@@ -12,7 +11,8 @@ interface Props {
 // ::
 const BlockListItem: FC<Props> = ({ data }) => {
   const itemData = data[data.type];
-  const content =itemData.rich_text;
+  const content = itemData.rich_text;
+  const id = useId();
 
   if (content?.length === 0) return null;
 
@@ -21,8 +21,8 @@ const BlockListItem: FC<Props> = ({ data }) => {
       isDone={data.type === 'to_do' && itemData.checked}
     >
       {'- '}
-      {content.map((item: any) => {
-        return <Fragment key={nanoid()}><PlainText text={item} /></Fragment>;
+      {content.map((item: any, index: number) => {
+        return <Fragment key={`${id}-kotion-block-list-item-${JSON.stringify(item)}-${index}`}><PlainText text={item} /></Fragment>;
       })}
     </Atom.ListItem>
   );

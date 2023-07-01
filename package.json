@@ -1,6 +1,6 @@
 {
   "name": "kotion",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "an abstraction lib to use notion api combined with next.js",
   "main": "index.js",
   "files": [
@@ -28,17 +28,17 @@
   "homepage": "https://github.com/vkiss/kotion#readme",
   "devDependencies": {
     "@babel/core": "~7.22.5",
-    "@notionhq/client": "^2.2.5",
-    "@types/react": "~18.2.12",
-    "@types/react-dom": "~18.2.5",
-    "@types/styled-components": "^5.1.26",
+    "@notionhq/client": "~2.2.6",
+    "@types/react": "~18.2.14",
+    "@types/react-dom": "~18.2.6",
+    "@types/styled-components": "~5.1.26",
     "babel-loader": "~9.1.2",
     "clear-path": "~1.3.3",
     "next": "*",
     "react": "*",
     "styled-components": "~5.3.11",
-    "ts-loader": "~9.4.3",
-    "typescript": "~5.1.3"
+    "ts-node": "~10.9.1",
+    "typescript": "~5.1.6"
   },
   "dependencies": {
     "@types/react-syntax-highlighter": "~15.5.7",
