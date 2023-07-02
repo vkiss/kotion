@@ -4,7 +4,7 @@ import pagesInDb, { type Params as ParamPagesInDb } from './notionPagesInDb';
 import { notionPageContentById as notionPageContentByIdFunction } from './notionPageContentById';
 
 const client = new Client({
-  auth: process.env.NOTION_TOKEN,
+  auth: 'NOTION_TOKEN',
 });
 
 export type TNotionClient = typeof client;
